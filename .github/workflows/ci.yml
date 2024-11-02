@@ -34,10 +34,5 @@ jobs:
       run: mvn clean install
 
     - name: Run tests
-      run: |
-        echo "Running tests with intentional failure for testing."
-        mvn test || exit 1  # Exit with error code if any test fails
-
-    - name: Intentional Fail Step
-      run: exit 1
+      run: mvn test
 
